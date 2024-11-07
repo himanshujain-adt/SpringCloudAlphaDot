@@ -1,0 +1,27 @@
+package com.alpha.user.service;
+
+import java.util.List;
+
+import com.alpha.user.entites.User;
+
+public class UserServiceImpl implements UserServiceInt {
+
+	@Override
+	public User saveUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<User> getAllUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUser(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

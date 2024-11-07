@@ -1,0 +1,33 @@
+package com.alpha.rating.entites;
+
+
+
+import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name="ST_RATINGS")
+public class Ratings {
+	
+	@Id
+	private String ratingId;
+	
+	private String userId;
+	
+	private String hotelId;
+	
+	private Integer rating;
+	
+	private String feedback;
+	
+}

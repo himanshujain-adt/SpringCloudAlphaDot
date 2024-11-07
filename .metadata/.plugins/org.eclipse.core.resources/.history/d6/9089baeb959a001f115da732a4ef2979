@@ -1,0 +1,17 @@
+package com.alpha.rating.service;
+
+
+import java.util.List;
+
+import com.alpha.rating.entites.Hotel;
+
+
+
+public interface HotelService {
+
+	Hotel create(Hotel hotel);
+	
+	List<Hotel> getAll();
+	
+	Hotel getById(String hotelId);
+}

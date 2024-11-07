@@ -1,0 +1,8 @@
+package com.alpha.user.external.services;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="RATING-MIRCO-SERVICE")
+public interface RatingService {
+
+}

@@ -1,0 +1,13 @@
+package com.alpha.ServiceRepoistry;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ServiceRepoistryApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ServiceRepoistryApplication.class, args);
+	}
+
+}
