@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Himanshu Jain Data\SpringCloud Alpha\ConfigServer"/>
+			<item value="C:\Himanshu Jain Data\SpringCloud Alpha\APIGateway"/>
 			<item value="C:\Himanshu Jain Data\SpringCloud Alpha\ServiceRepoistry"/>
 			<item value="C:\Himanshu Jain Data\SpringCloud Alpha\UserServiceCloud"/>
 			<item value="C:\Himanshu Jain Data\SpringCloud Alpha\UserService"/>
@@ -44,13 +46,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.alpha.ServiceRegistry"/>
 		</list>
 		<list key="groupId">
-			<item value="com.alpha"/>
 		</list>
 		<list key="artifactId">
-			<item value="ServiceRegistry"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

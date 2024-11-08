@@ -1,0 +1,9 @@
+server.port=8092
+
+spring.application.name=API-GATWAY
+
+eureka.client.fetch-registry=true
+eureka.instance.prefer-ip-address=true
+eureka.client.service-url.defaultZone=http://localhost:8081/eureka
+
+eureka.instance.instance-id=${spring.application.name} ${server.port}

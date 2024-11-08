@@ -1,0 +1,17 @@
+#server:
+#  port: 8092
+#
+#spring:
+#  application:
+#    name: API-GATWAY
+#
+#eureka:
+#  client:
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8081/eureka
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: "${spring.application.name} ${server.port}"
+
+ 
