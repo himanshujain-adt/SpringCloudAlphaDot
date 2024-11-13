@@ -19,6 +19,8 @@ import com.alpha.user.entites.User;
 import com.alpha.user.service.UserServiceInt;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 
 @RestController
 @RequestMapping("/users")
@@ -26,6 +28,8 @@ public class UserController {
 
 	@Autowired
 	private UserServiceInt userServiceInt;
+
+	int retryCount = 1;
 
 	private Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -36,8 +40,13 @@ public class UserController {
 	}
 
 	@GetMapping("/{userId}")
-	@CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod = "ratingHotelfallback")
+	// @CircuitBreaker(name = "ratingHotelBreaker", fallbackMethod =
+	// "ratingHotelfallback")
+	//@Retry(name = "ratingHotelService", fallbackMethod = "ratingHotelfallback")
+	@RateLimiter(name="userRateLimiter" ,fallbackMethod = "ratingHotelfallback" )
 	public ResponseEntity<User> getSingleUser(@PathVariable String userId) {
+		//logger.info("Retry count:{}", retryCount);
+		retryCount++;
 		User user = userServiceInt.getUser(userId);
 		return ResponseEntity.ok(user);
 
